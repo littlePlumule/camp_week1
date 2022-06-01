@@ -1,0 +1,284 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.wrap {
+  padding: 30px 42px;
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.wrap .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.wrap .header .logo {
+  width: 200px;
+}
+.wrap .header .logo img {
+  width: 100%;
+}
+.wrap .header .navbar ul {
+  display: flex;
+}
+.wrap .header .navbar ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3F5D45;
+}
+.wrap .header .navbar ul li + li {
+  margin-left: 60px;
+}
+.wrap .banner {
+  margin-bottom: 60px;
+}
+.wrap .banner img {
+  width: 100%;
+}
+.wrap main {
+  margin-bottom: 30px;
+  display: flex;
+}
+.wrap main .sidebar {
+  height: max-content;
+  margin-right: 20px;
+}
+.wrap main .sidebar ul {
+  display: flex;
+  flex-direction: column;
+}
+.wrap main .sidebar ul li:not(:first-child) a {
+  cursor: pointer;
+}
+.wrap main .sidebar ul li a {
+  width: 300px;
+  height: 65px;
+  display: inline-block;
+  text-decoration: none;
+  color: #3F5D45;
+  text-align: center;
+  line-height: 65px;
+  border: 1px solid #EAF0ED;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+.wrap main .sidebar ul li a:hover {
+  background-color: #EAF0ED;
+}
+.wrap main .sidebar ul li:first-child a {
+  background-color: #3F5D45;
+  color: #fff;
+  border: 1px solid #3F5D45;
+}
+.wrap main .products {
+  width: 620px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap main .products .product {
+  width: 300px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.wrap main .products .product img {
+  width: 100%;
+  height: 315px;
+}
+.wrap main .products .product__news {
+  display: flex;
+}
+.wrap main .products .product__news__name {
+  width: calc(100% - 127px);
+  border-top: 1px solid #EAF0ED;
+  border-left: 1px solid #EAF0ED;
+  border-bottom: 1px solid #EAF0ED;
+  padding: 14px 0;
+  text-align: center;
+  color: #3F5D45;
+  font-weight: 300;
+  font-size: 20px;
+}
+.wrap main .products .product__news__money {
+  width: 127px;
+  border: 1px solid #EAF0ED;
+  padding: 14px 0;
+  text-align: center;
+  color: #3F5D45;
+  font-weight: 600;
+  font-size: 20px;
+}
+.wrap main .products .product button {
+  width: 100%;
+  height: 65px;
+  padding: 16px 0;
+  text-align: center;
+  border: 0;
+  background-color: #EAF0ED;
+  color: #3F5D45;
+  font-weight: 600;
+  font-size: 24px;
+  cursor: pointer;
+}
+.wrap main .products .product::before {
+  content: "本日精選";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: #3F5D45;
+  color: #EAF0ED;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  writing-mode: vertical-lr;
+}
+.wrap main .products .product::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  right: 22px;
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.wrap main .products .product:nth-of-type(odd) {
+  margin-right: 20px;
+}
+.wrap .pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+.wrap .pagination li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  border: 1px solid #EAF0ED;
+  font-weight: 300;
+  font-size: 20px;
+}
+.wrap .pagination li a:hover {
+  background-color: #3F5D45;
+  color: #fff;
+  font-weight: 600;
+}
+.wrap .pagination li a:hover img {
+  filter: brightness(8);
+}
+
+.footer {
+  width: 1024px;
+  margin: 0 auto;
+}
+.footer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #3F5D45;
+  padding: 30px 120px;
+}
+.footer__header__title {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  font-size: 24px;
+}
+.footer__header__title img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.footer__header__title p {
+  white-space: nowrap;
+  color: #fff;
+}
+.footer__header__input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.footer__header__input input {
+  border: 0;
+  height: 56px;
+  width: 316px;
+  outline: none;
+  padding: 0 44px;
+}
+.footer__header__input button {
+  width: 64px;
+  height: 56px;
+  border: 0;
+  background-color: #FFE180;
+  outline: none;
+  cursor: pointer;
+}
+.footer__header__input::before {
+  content: "";
+  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png);
+  width: 24px;
+  position: absolute;
+  height: 24px;
+  left: 20px;
+}
+.footer__body {
+  width: 100%;
+  height: 341px;
+  padding: 30px 122px;
+  background-color: #EAF0ED;
+  position: relative;
+}
+.footer__body::before {
+  content: "今天是個吃甜點___的好日子。";
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 30px;
+  right: 121.72px;
+  font-size: 24px;
+  width: 59px;
+  height: 218px;
+}
+.footer__body__logo {
+  width: 172px;
+  height: 27px;
+  margin-bottom: 115.5px;
+}
+.footer__body__news {
+  white-space: pre-line;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+.footer__body__content {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__body__content .icon {
+  display: flex;
+}
+.footer__body__content .icon img {
+  width: 32px;
+  height: 32px;
+}
+.footer__body__content .icon img + img {
+  margin-left: 8px;
+}
+
+/*# sourceMappingURL=index.css.map */

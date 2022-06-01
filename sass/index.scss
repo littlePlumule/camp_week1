@@ -1,0 +1,288 @@
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+.wrap {
+  padding: 30px 42px;
+  width: 1024px;
+  margin: 0 auto;
+  background-color: $white;
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .logo {
+      width: 200px;
+      img {
+        width: 100%;
+      }
+    }
+    .navbar ul{
+      display: flex;
+      li a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        color: $green;
+      }
+      li + li{
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .banner{
+    margin-bottom: 60px;
+    img{
+      width: 100%;
+    }
+  }
+
+  main {
+    margin-bottom: 30px;
+    display: flex;
+    .sidebar {
+      height: max-content;
+      margin-right: 20px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          &:not(:first-child) a{
+            cursor: pointer;
+          }
+          a {
+            width: 300px;
+            height: 65px;
+            display: inline-block;
+            text-decoration: none;
+            color: $green;
+            text-align: center;
+            line-height: 65px;
+            border: 1px solid $gray;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            &:hover {
+              background-color: $gray;
+            }
+          }
+          &:first-child a{
+            background-color: $green;
+            color: $white;
+            border: 1px solid $green;
+          }
+        }
+      }
+    }
+    .products {
+      width: 620px;
+      display: flex;
+      flex-wrap: wrap;
+      .product {
+        width: 300px;
+        margin-bottom: 20px;
+        position: relative;
+        img {
+          width: 100%;
+          height: 315px;
+        }
+        &__news {
+          display: flex;
+          &__name {
+            width: calc(100% - 127px);
+            border-top: 1px solid $gray;
+            border-left: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            padding: 14px 0;
+            text-align: center;
+            color: $green;
+            font-weight: 300;
+            font-size: 20px;
+          }
+          &__money {
+            width: 127px;
+            border: 1px solid $gray;
+            padding: 14px 0;
+            text-align: center;
+            color: $green;
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+        button {
+          width: 100%;
+          height: 65px;
+          padding: 16px 0;
+          text-align: center;
+          border: 0;
+          background-color: $gray;
+          color: $green;
+          font-weight: 600;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        &::before {
+          content: '本日精選';
+          position: absolute;
+          top: 0;
+          left: 20px;
+          background-color: $green;
+          color: $gray;
+          padding: 10px;
+          font-weight: 600;
+          font-size: 16px;
+          writing-mode: vertical-lr;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 19px;
+          right: 22px;
+          background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png);
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+        &:nth-of-type(odd) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #000;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        border: 1px solid $gray;
+        font-weight: 300;
+        font-size: 20px;
+        &:hover {
+          background-color: $green;
+          color: $white;
+          font-weight: 600;
+        }
+        &:hover img {
+          filter: brightness(8);
+        }
+      }
+    }
+  }
+   
+}
+.footer {
+  width: 1024px;
+  margin: 0 auto;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $green;
+    padding: 30px 120px;
+    &__title {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      font-size: 24px;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+      p {
+        white-space: nowrap;
+        color: $white;
+      }
+    }
+    &__input {
+      display: flex;
+      align-items: center;
+      position: relative;
+      input {
+        border: 0;
+        height: 56px;
+        width: 316px;
+        outline: none;
+        padding: 0 44px;
+      }
+      button {
+        width: 64px;
+        height: 56px;
+        border: 0;
+        background-color: $yellow;
+        outline: none;
+        cursor: pointer;
+      }
+      &::before {
+        content: '';
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/mail-24px.png);
+        width: 24px;
+        position:absolute;
+        height: 24px;
+        left: 20px;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+    height: 341px;
+    padding: 30px 122px;
+    background-color: $gray;
+    position: relative;
+    &::before {
+      content: '今天是個吃甜點___的好日子。';
+      writing-mode: vertical-rl;
+      position: absolute;
+      top: 30px;
+      right: 121.72px;
+      font-size: 24px;
+      width: 59px;
+      height: 218px;
+    }
+    &__logo {
+      width: 172px;
+      height: 27px;
+      margin-bottom: 115.5px;
+    }
+    &__news {
+      white-space: pre-line;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    &__content {
+      height: 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .icon {
+        display: flex;
+        img {
+          width: 32px;
+          height: 32px;
+          & + img {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+    
+  }
+}
